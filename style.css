@@ -107,14 +107,26 @@ html, body {
   background-position: 0 0;
 }
 
-.swipe-slider-prev {
-  background-image: url("left-arrow.png");
-  float:left;
+.swipe-nav{
+  background-image: url('swipe-arrow.png');
+  cursor: pointer;
+  float: left;
 }
 
-.swipe-slider-next {
-  background-image: url("right-arrow.png");
-  float:left;
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi){
+  .swipe-nav{
+    background-image: url('swipe-arrow@2x.png');
+    -webkit-background-size: 18px;
+    background-size: 18px;
+  }
+}
+
+.swipe-nav--left{
+  background-position: 0 0;
+}
+
+.swipe-nav--right{
+  background-position: 9px 0;
 }
 
 /*************************** SWIPE NAVIGATION ********************/
