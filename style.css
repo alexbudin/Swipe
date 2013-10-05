@@ -111,6 +111,12 @@ html, body {
   background-image: url('swipe-arrow.png');
   cursor: pointer;
   float: left;
+
+  /* prevent user from selecting the button when clicked too fast */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi){
@@ -125,8 +131,16 @@ html, body {
   background-position: 0 0;
 }
 
+.swipe-nav--left:hover{
+  background-position: 0 -18px;
+}
+
 .swipe-nav--right{
   background-position: 9px 0;
+}
+
+.swipe-nav--right:hover{
+  background-position: 9px -18px;
 }
 
 /*************************** SWIPE NAVIGATION ********************/
